@@ -1,0 +1,40 @@
+name: Feature request
+description: Proposition d’amélioration ou nouvelle capacité
+title: "[feat]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème ou besoin
+      description: Quel cas d’usage manque aujourd’hui ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution proposée
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Périmètre probable
+      options:
+        - SDK / schéma / CLI
+        - Module catalogue
+        - Documentation
+        - Site marketing
+        - Je ne sais pas
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: breaking
+    attributes:
+      label: Impact
+      options:
+        - label: Changement potentiellement breaking (semver majeur SDK ou contrat module)
+          required: false

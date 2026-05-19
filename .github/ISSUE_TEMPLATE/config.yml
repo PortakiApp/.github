@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation SDK
+    url: https://github.com/PortakiApp/portaki-sdk
+    about: Guides auteur de modules et référence du schéma
+  - name: Site Portaki
+    url: https://portaki.app
+    about: Produit et contact commercial

@@ -1,0 +1,59 @@
+name: Bug report
+description: Comportement incorrect ou régression
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de ne pas inclure de secrets ni de données personnelles. Pour une vulnérabilité, voir [SECURITY.md](https://github.com/PortakiApp/.github/blob/main/SECURITY.md).
+
+  - type: dropdown
+    id: repo_area
+    attributes:
+      label: Zone
+      options:
+        - portaki-sdk
+        - portaki-modules (module spécifique — préciser en description)
+        - portaki-landing
+        - Autre dépôt public PortakiApp
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit / tag npm
+      placeholder: "ex. @portaki/sdk 1.2.3, commit abc123, module sections@2.0.1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      placeholder: |
+        1. …
+        2. …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement attendu
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportement observé
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / captures (optionnel)
+      render: shell
