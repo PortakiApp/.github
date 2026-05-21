@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="https://portaki.app/portaki-wordmark.svg" width="177" height="48" alt="Portaki" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://portaki.app/logo-dark.svg">
+    <img src="https://portaki.app/logo-light.svg" width="177" height="48" alt="Portaki">
+  </picture>
 </p>
 
 <h3 align="center">Livret d’accueil numérique pour locations saisonnières</h3>
