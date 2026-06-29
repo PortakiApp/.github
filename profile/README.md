@@ -1,6 +1,6 @@
 <h1 align="center">Salut, c'est moi Cyril 👋</h1>
 
-<h3 align="center">Ingénieur full-stack · architecture backend · finance & crypto</h3>
+<h3 align="center">Ingénieur full-stack · architecture backend · finance, crypto & IA</h3>
 
 <p align="center">
   <a href="https://cyrilcolinet.xyz">Site perso</a> ·
@@ -48,6 +48,7 @@ Je conçois et livre des produits numériques de bout en bout — surtout quand 
 - **Backends & systèmes distribués** — Spring Boot, Node.js, event sourcing / CQRS, patterns ledger & outbox
 - **Apps web & mobile** — React, Next.js, Flutter ; dashboards, portails, outils internes
 - **Intégrations critiques** — paiements, services bancaires, crypto, SaaS tiers, observabilité incluse
+- **Ingénierie IA** — intégration de l'IA dans les produits qui en ont besoin (RAG, agents, APIs LLM, pipelines métier) ; **entraînement et déploiement de modèles custom** pour les entreprises, du fine-tuning à la mise en prod
 - **Conseil technique** — audit, accélération delivery, mentoring d'équipes
 
 Clients et missions récentes : **Ledgity**, **Epitech**, **Expert Crypto**, et d'autres acteurs fintech / produit.
@@ -81,6 +82,13 @@ Clients et missions récentes : **Ledgity**, **Epitech**, **Expert Crypto**, et 
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch">
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI">
+  <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face">
+</p>
+
 ## Compétences
 
 <table>
@@ -92,6 +100,7 @@ Clients et missions récentes : **Ledgity**, **Epitech**, **Expert Crypto**, et 
 - Cadrage MVP et specs exécutables
 - Domaines finance, crypto, DeFi
 - Workflows ops & automatisation
+- IA appliquée : cas d'usage, garde-fous, ROI métier
 - UX orientée confiance (données sensibles)
 
 </td>
@@ -102,6 +111,7 @@ Clients et missions récentes : **Ledgity**, **Epitech**, **Expert Crypto**, et 
 - APIs REST & GraphQL, intégrations tierces
 - Mobile iOS / Android (Flutter, natif)
 - CI/CD, Docker, cloud (AWS, Vercel)
+- Modèles custom : entraînement, évaluation, déploiement entreprise
 - Documentation, handover, runbooks ops
 
 </td>
