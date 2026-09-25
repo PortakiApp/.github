@@ -1,0 +1,32 @@
+name: Cancel CI on merge
+
+# Workflow réutilisable : une PR mergée (y compris par contournement des protections) n'a plus
+# besoin de ses exécutions. On annule tout ce qui tourne ou attend encore pour sa tête, sauf nous.
+# Appel depuis un dépôt :
+#   on: { pull_request: { types: [closed] } }
+#   permissions: { actions: write }
+#   jobs: { cancel: { if: github.event.pull_request.merged, uses: PortakiApp/.github/.github/workflows/cancel-ci-on-merge.yml@main } }
+on:
+  workflow_call:
+
+permissions:
+  actions: write
+
+jobs:
+  cancel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const runs = await github.paginate(github.rest.actions.listWorkflowRunsForRepo, {
+              owner, repo, head_sha: context.payload.pull_request.head.sha, per_page: 100,
+            });
+            for (const run of runs) {
+              if (run.status === 'completed' || run.id === context.runId) continue;
+              core.info(`cancel ${run.name} #${run.id}`);
+              await github.rest.actions.cancelWorkflowRun({ owner, repo, run_id: run.id })
+                .catch((e) => core.warning(`run ${run.id}: ${e.message}`));
+            }
