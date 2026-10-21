@@ -4,15 +4,17 @@ Cartographie des dépôts **ouverts** de l’organisation. Pour la liste complè
 
 | Dépôt | Rôle |
 |-------|------|
-| [portaki-sdk](https://github.com/PortakiApp/portaki-sdk) | Schéma `module.v1.json`, `@portaki/sdk`, `@portaki/module-sdk`, SDK Java module, CLI, docs auteur |
-| [portaki-modules](https://github.com/PortakiApp/portaki-modules) | Catalogue `modules/<id>/`, publication npm `@portaki/module-*` |
-| [portaki-landing](https://github.com/PortakiApp/portaki-landing) | Marketing [portaki.app](https://portaki.app) |
+| [portaki-sdk](https://github.com/PortakiApp/portaki-sdk) | SDK Rust des modules Wasm (`portaki-sdk`, `portaki-sdk-macros`, `portaki-connectors`, `portaki-test-utils`) et CLI `portaki-cli` |
+| [portaki-modules](https://github.com/PortakiApp/portaki-modules) | Modules officiels `modules/<id>/`, publiés en images OCI |
+| [portaki-release-action](https://github.com/PortakiApp/portaki-release-action) | GitHub Action de build et publication d’un module |
+| [portaki-changelog](https://github.com/PortakiApp/portaki-changelog) | Notes de version produit (`releases.yaml`) lues par l’espace hôte |
 | [.github](https://github.com/PortakiApp/.github) | Profil org public, fichiers communauté par défaut |
 
 ## Dépendances publiées
 
-- **npm** : scope [`@portaki`](https://www.npmjs.com/org/portaki) (`sdk`, `module-sdk`, `cli`, modules catalogue).
-- **Maven / artefacts modules** : voir workflows et README de `portaki-modules`.
+- **crates.io** : [`portaki-sdk`](https://crates.io/crates/portaki-sdk), `portaki-sdk-macros`, `portaki-connectors`, `portaki-test-utils`, `portaki-cli`.
+- **Modules** : images OCI `oci.portaki.app/modules/<id>:<semver>` (voir le README de `portaki-modules`).
+- Les paquets npm `@portaki/*` sont dépréciés (remplacés par le SDK Rust).
 
 ## Dépôts archivés (référence)
 

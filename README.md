@@ -14,10 +14,11 @@ Dépôt **public** de l’organisation [PortakiApp](https://github.com/PortakiAp
 | [`pull_request_template.md`](pull_request_template.md) | Modèle de PR par défaut |
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | Formulaires d’issues par défaut |
 | [`docs/repositories.md`](docs/repositories.md) | Cartographie des dépôts **publics** |
+| [`.github/workflows/cancel-ci-on-merge.yml`](.github/workflows/cancel-ci-on-merge.yml) | Workflow réutilisable : annule la CI d’une PR une fois mergée |
 
 ## Dépôt complémentaire
 
-- **[`.github-private`](https://github.com/PortakiApp/.github-private)** (privé) : README profil **membres**, modèles et docs internes (GPR, dépôts privés, onboarding équipe).
+- **`.github-private`** (privé, membres de l’org) : README profil **membres**, modèles et docs internes.
 
 ## Priorité des fichiers
 

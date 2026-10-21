@@ -11,26 +11,28 @@
   <a href="https://portaki.app">Site</a> ·
   <a href="https://github.com/PortakiApp/portaki-sdk">SDK</a> ·
   <a href="https://github.com/PortakiApp/portaki-modules">Modules</a> ·
-  <a href="https://www.npmjs.com/org/portaki">npm @portaki</a>
+  <a href="https://crates.io/crates/portaki-sdk">crates.io</a>
 </p>
 
 ---
 
-Portaki aide les hôtes à partager infos pratiques, règles et services aux voyageurs — avec une **plateforme modulaire** : chaque capacité (sections, calendrier, formulaires…) est un module catalogue branché sur un contrat stable.
+Portaki aide les hôtes à partager infos pratiques, règles et services aux voyageurs. La plateforme est **modulaire** : chaque capacité du livret (accès, Wi-Fi, règles, guide local, météo…) est un module **Rust compilé en Wasm** (Extism), exécuté en bac à sable par la plateforme et rendu par le livret en interface pilotée par le serveur.
 
 ## Dépôts ouverts
 
 | Dépôt | Description |
 |-------|-------------|
-| [**portaki-sdk**](https://github.com/PortakiApp/portaki-sdk) | Schéma `module.v1.json`, SDK JS (`@portaki/sdk`, `@portaki/module-sdk`), SDK Java module, CLI |
-| [**portaki-modules**](https://github.com/PortakiApp/portaki-modules) | Catalogue officiel et communautaire `@portaki/module-*` |
-| [**portaki-landing**](https://github.com/PortakiApp/portaki-landing) | Site marketing [portaki.app](https://portaki.app) |
+| [**portaki-sdk**](https://github.com/PortakiApp/portaki-sdk) | SDK Rust (`portaki-sdk`, macros, connecteurs, utilitaires de test) et CLI `portaki`, publiés sur [crates.io](https://crates.io/crates/portaki-sdk) |
+| [**portaki-modules**](https://github.com/PortakiApp/portaki-modules) | Monorepo des modules officiels, publiés en images OCI `oci.portaki.app/modules/<id>` |
+| [**portaki-release-action**](https://github.com/PortakiApp/portaki-release-action) | GitHub Action : build, publication, signature et annonce d’un module au registre Portaki |
+| [**portaki-changelog**](https://github.com/PortakiApp/portaki-changelog) | Notes de version produit (`releases.yaml`) affichées dans l’espace hôte |
+| [**.github**](https://github.com/PortakiApp/.github) | Ce profil et les fichiers communauté par défaut |
 
 ## Construire un module
 
-1. Lire le [guide modules](https://github.com/PortakiApp/portaki-sdk/tree/main/docs) et le schéma [`module.v1.json`](https://github.com/PortakiApp/portaki-sdk/blob/main/schema/module.v1.json).
-2. S’appuyer sur [`@portaki/module-sdk`](https://www.npmjs.com/package/@portaki/module-sdk) (npm) — pas de dépendance `workspace:` vers ce monorepo en publication.
-3. Ouvrir une PR sur **portaki-modules** ou publier votre paquet selon [CONTRIBUTING](https://github.com/PortakiApp/.github/blob/main/CONTRIBUTING.md).
+1. Installer la CLI et suivre le démarrage rapide du [SDK](https://github.com/PortakiApp/portaki-sdk#quick-start) (`portaki init`, `portaki check`).
+2. Lire la [documentation du SDK](https://github.com/PortakiApp/portaki-sdk/tree/main/docs) et s’inspirer des [modules officiels](https://github.com/PortakiApp/portaki-modules/tree/main/modules).
+3. Publier depuis la CI avec [portaki-release-action](https://github.com/PortakiApp/portaki-release-action), ou proposer une PR sur **portaki-modules** selon [CONTRIBUTING](https://github.com/PortakiApp/.github/blob/main/CONTRIBUTING.md).
 
 ## Sécurité
 
@@ -38,4 +40,4 @@ Signalement responsable : voir [SECURITY.md](https://github.com/PortakiApp/.gith
 
 ## Équipe
 
-Les dépôts applicatifs (API, web hôte, runtime) sont maintenus en privé par l’équipe Portaki. Les contributions externes ciblent en priorité le **SDK** et le **catalogue modules**.
+Les dépôts applicatifs (plateforme, espace hôte, livret voyageur, site vitrine) sont maintenus en privé par l’équipe Portaki. Les contributions externes ciblent en priorité le **SDK** et les **modules**.
